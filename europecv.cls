@@ -28,6 +28,14 @@
     Try to re-install the europecv class.}}%
   }%
 }
+\DeclareOption{british}{%
+  \AtEndOfPackage{%
+    \InputIfFileExists{ecven.def}{}{%
+    \ClassError{europecv}{English definition file 'ecven.def' not found}%
+     {The file should be inside the europecv folder.\MessageBreak
+    Try to re-install the europecv class.}}%
+  }%
+}
 \DeclareOption{italian}{%
   \AtEndOfPackage{%
     \InputIfFileExists{ecvit.def}{}{%
