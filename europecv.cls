@@ -58,6 +58,13 @@
     \ClassWarningNoLine{europecv}{German definition file 'ecvde.def' not found}}%
   }%
 }
+% Alias german to ngerman -> makes babel easier to use.
+\DeclareOption{ngerman}{%
+  \AtEndOfPackage{%
+    \InputIfFileExists{ecvde.def}{}{%
+    \ClassWarningNoLine{europecv}{German definition file 'ecvde.def' not found}}%
+  }%
+}
 \DeclareOption{finnish}{%
   \AtEndOfPackage{%
     \InputIfFileExists{ecvfi.def}{}{%
