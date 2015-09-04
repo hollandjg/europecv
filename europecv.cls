@@ -229,11 +229,11 @@
 \DeclareOption{macukr}{\AtEndOfClass{\inputencoding{macukr}}}
 
 % Set font
-\DeclareOption{helvetica}{%                       
+\DeclareOption{helvetica}{%
   \renewcommand{\rmdefault}{phv}
   \renewcommand{\sfdefault}{phv}
 }
-\DeclareOption{arial}{%                       
+\DeclareOption{arial}{%
   \renewcommand{\rmdefault}{ma1} % (this font is NOT installed by default!)
   \renewcommand{\sfdefault}{ma1}
 }
@@ -254,7 +254,7 @@
 }
 \DeclareOption{nologo}{\renewcommand*\draweuropasslogo{}}
 
-% Flag pictures of the EC can be found at 
+% Flag pictures of the EC can be found at
 %   http://europa.eu.int/abc/symbols/emblem/index_en.htm
 \DeclareOption{noflag}{\providecommand*\draweuropeflag{}}
 \DeclareOption{flagWB}{%
@@ -289,7 +289,7 @@
 % Pass all other options (a4paper, 10pt, draft, openbib, etc...) to article
 \DeclareOption*{%
   \PassOptionsToClass{\CurrentOption}{article}%
-} 
+}
 
 \ExecuteOptions{english,noflag,logo,hrule} % Default options
 
@@ -299,7 +299,7 @@
 
 %% start of addition (with permission) by David Carlisle
 \ifx\Umathchar\@undefined
-%% encoding support for pdftex and classic TeX 
+%% encoding support for pdftex and classic TeX
 \RequirePackage{ucs}
 \RequirePackage[utf8x]{inputenc}
 \else
@@ -557,7 +557,7 @@
 
 % Text bullet
 \newcommand{\ecvbullet}{\raisebox{.35ex}[0cm][0cm]{\tiny\textbullet}}
-                                          
+
 \newenvironment{europecv}{%
   \ecvLeftColumnWidth{\ecv@leftcolwidth}
   \setlength\arrayrulewidth{\ecv@rulewidth}
@@ -591,7 +591,7 @@
 \newcommand{\ecvsection}[2][10pt]{%
   {\large{\par\textbf{#2}}}\vspace{#1} & \tabularnewline\nopagebreak
 }
-          
+
 \newif\if@ecvitemstar
 \newcommand\ecvitem{\@ifstar{\@ecvitemstartrue \@ecvitem}%
   {\@ecvitemstarfalse\@ecvitem}}
