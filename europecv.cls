@@ -328,7 +328,7 @@
 \newcommand\ecvfootnote[1]{\def\ecv@rfoot{#1}}
 \ecvfootnote{}
 
-\AtBeginDocument{%
+\AtEndOfPackage{%
 % Ensure that \ecv@leftcolwidth and \ecv@rightcolwidth
 % are correctly defined
 \ecvLeftColumnWidth{\ecv@leftcolwidth}
