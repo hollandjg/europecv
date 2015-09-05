@@ -3,6 +3,7 @@
 % Translation completed 06.02.2006.
 \ProvidesFile{ecvsr.def}[europecv Serbian definitions]
 % Personal information
+\addto\captionsserbian{
 \def\ecv@infosectionkey{\ecv@utf{Li{\v c}ni podaci}}
 \def\ecv@namekey{\ecv@utf{Prezime~/ ime}}
 \def\ecv@addresskey{\ecv@utf{Adresa}}
@@ -32,8 +33,9 @@
 \def\ecv@cefindepkey{\ecv@utf{Samostalni korisnik}}
 \def\ecv@cefprofkey{\ecv@utf{Osposobljeni korisnik}}
 
-\providecommand*{\ecvtitle}{\ecv@utf{\Large\textbf{E\ecv@kern v\ecv@kern
+\def\ecvtitle{\ecv@utf{\Large\textbf{E\ecv@kern v\ecv@kern
 r\ecv@kern o\ecv@kern p\ecv@kern s\ecv@kern k\ecv@kern i}\\[5pt]
 \Large\textbf{C\ecv@kern u\ecv@kern r\ecv@kern r\ecv@kern
 i\ecv@kern c\ecv@kern u\ecv@kern l\ecv@kern u\ecv@kern m \ecv@kern
 V\ecv@kern i\ecv@kern t\ecv@kern a\ecv@kern e}}}
+}

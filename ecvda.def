@@ -3,6 +3,7 @@
 % Translation completed on 2006/01/11
 \ProvidesFile{ecvda.def}[europecv Danish definitions]
 % Personal information
+\addto\captionsdanish{
 \def\ecv@infosectionkey{\ecv@utf{Personlige oplysninger}}
 \def\ecv@namekey{\ecv@utf{Efternavn(e), fornavn(e) og mellemnavn(e)}}
 \def\ecv@addresskey{\ecv@utf{Adresse(r)}}
@@ -32,8 +33,9 @@
 \def\ecv@cefindepkey{\ecv@utf{Selvst\ae ndig sprogbruger}}
 \def\ecv@cefprofkey{\ecv@utf{Kompetent sprogbruger}}
 
-\renewcommand*\ecvtitle{\ecv@utf{\Large\textbf{E\ecv@kern u\ecv@kern
+\def\ecvtitle{\ecv@utf{\Large\textbf{E\ecv@kern u\ecv@kern
 r\ecv@kern o\ecv@kern p\ecv@kern \ae\ecv@kern i\ecv@kern s\ecv@kern k}\\[5pt]
 \Large\textbf{c\ecv@kern u\ecv@kern r\ecv@kern r\ecv@kern
 i\ecv@kern c\ecv@kern u\ecv@kern l\ecv@kern u\ecv@kern m \ecv@kern v\ecv@kern
 i\ecv@kern t\ecv@kern a\ecv@kern e}}}
+}

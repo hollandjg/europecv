@@ -4,6 +4,7 @@
 \ProvidesFile{ecvmt-utf8.def}[europecv Maltese definitions]
 \inputencoding{utf8x}
 % Personal information
+\addto\captionsmaltese{
 \def\ecv@infosectionkey{\ecv@utf{Tagħrif personali}}
 \def\ecv@namekey{\ecv@utf{Kunjom(ijiet) Isem (Ismijiet)}}
 \def\ecv@addresskey{\ecv@utf{L-indirizz}}
@@ -32,3 +33,12 @@
 \def\ecv@cefbasickey{\ecv@utf{Basic user}} % To be translated
 \def\ecv@cefindepkey{\ecv@utf{Independent user}} % To be translated
 \def\ecv@cefprofkey{\ecv@utf{Proficient user}} % To be translated
+
+% To be translated
+\def\ecvtitle{\ecv@utf{\Large\textbf{E\ecv@kern u\ecv@kern
+r\ecv@kern o\ecv@kern p\ecv@kern a\ecv@kern s\ecv@kern s}\\[5pt]
+\Large\textbf{C\ecv@kern u\ecv@kern r\ecv@kern r\ecv@kern
+i\ecv@kern c\ecv@kern u\ecv@kern l\ecv@kern u\ecv@kern m \ecv@kern V\ecv@kern
+i\ecv@kern t\ecv@kern a\ecv@kern e}}}
+
+}

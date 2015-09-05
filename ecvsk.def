@@ -3,6 +3,7 @@
 % Translation completed on 2006/01/13
 \ProvidesFile{ecvsk.def}[europecv Slovak definitions]
 % Personal information
+\addto\captionsslovak{
 \def\ecv@infosectionkey{\ecv@utf{Osobn{\'e} {\'u}daje}}
 \def\ecv@namekey{\ecv@utf{Priezvisko({\'a}) / Meno({\'a})}}
 \def\ecv@addresskey{\ecv@utf{Adresa(y)}}
@@ -32,7 +33,8 @@
 \def\ecv@cefindepkey{\ecv@utf{Samostatn{\'y} pou{\v z}{\'\i}vatel'}}
 \def\ecv@cefprofkey{\ecv@utf{Sk{\'u}sen{\'y} pou{\v z}{\'\i}vatel'}}
 
-\renewcommand*\ecvtitle{\ecv@utf{\Large\textbf{E\ecv@kern u\ecv@kern
+\def\ecvtitle{\ecv@utf{\Large\textbf{E\ecv@kern u\ecv@kern
 r\ecv@kern o\ecv@kern p\ecv@kern a\ecv@kern s\ecv@kern s}\\[5pt]
 \Large\textbf{{\v Z}\ecv@kern i\ecv@kern v\ecv@kern o\ecv@kern
 t\ecv@kern o\ecv@kern p\ecv@kern i\ecv@kern s}}}
+}
