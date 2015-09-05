@@ -19,6 +19,8 @@
 
 \newcommand\ecv@utf[1]{{\inputencoding{utf8x}#1}}
 
+\usepackage{babel} % inherits global package options and provides \addto hook.
+
 % Set language
 \DeclareOption{english}{%
   \AtEndOfPackage{%
@@ -256,11 +258,10 @@
   \renewcommand{\seriesdefault}{mc} % Narrow
   \renewcommand{\bfdefault}{bc}  % Boldface narrow
 }
-% No title
-% This must come *after* language definitions
-\DeclareOption{notitle}{%
-  \AtEndOfPackage{\renewcommand*\ecvtitle{}}%
-}
+
+% No title - doesn't matter where this comes.
+\providecommand*\writetitle{\ecvtitle}
+\DeclareOption{notitle}{\renewcommand*\writetitle{}}
 
 % Europass logo
 \DeclareOption{logo}{%
@@ -590,11 +591,11 @@
     % Any better way of achieving the same result?!?
     \vskip-\ecv@logooffset\draweuropasslogo\hfill\phantom{.}& \tabularnewline
   \fi
-  \ifx\@empty\ecvtitle\else
+  \ifx\@empty\writetitle\else
      \ifx\@empty\draweuropasslogo
        & \tabularnewline[-.5em]
      \fi
-     \ecvtitle &\tabularnewline
+     \writetitle &\tabularnewline
   \fi
   \ifx\@empty\draweuropeflag\else
      & \tabularnewline
