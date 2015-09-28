@@ -3,6 +3,7 @@
 % Translation completed on 2006/01/11
 \ProvidesFile{ecvit.def}[europecv Italian definitions]
 % Personal information
+\addto\captionsitalian{
 \def\ecv@infosectionkey{\ecv@utf{Informazioni personali}}
 \def\ecv@namekey{\ecv@utf{Cognome/i nome/i}}
 \def\ecv@addresskey{\ecv@utf{Indirizzo/i}}
@@ -32,8 +33,9 @@
 \def\ecv@cefindepkey{\ecv@utf{Livello intermedio}}
 \def\ecv@cefprofkey{\ecv@utf{Livello avanzato}}
 
-\renewcommand*{\ecvtitle}{\ecv@utf{%
+def\ecvtitle{\ecv@utf{%
 \Large\textbf{C\ecv@kern u\ecv@kern r\ecv@kern r\ecv@kern
 i\ecv@kern c\ecv@kern u\ecv@kern l\ecv@kern u\ecv@kern m \ecv@kern V\ecv@kern
 i\ecv@kern t\ecv@kern a\ecv@kern e}\\[5pt]
 \Large\textbf{E\ecv@kern u\ecv@kern r\ecv@kern o\ecv@kern p\ecv@kern a\ecv@kern s\ecv@kern s}}}
+}

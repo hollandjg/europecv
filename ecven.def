@@ -42,3 +42,4 @@ i\ecv@kern t\ecv@kern a\ecv@kern e}}}
 
 \addto\captionsenglish{\defineenglishnames}
 \addto\captionsbritish{\defineenglishnames}
+\addto\captionsUKenglish{\defineenglishnames}

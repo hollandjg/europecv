@@ -3,6 +3,7 @@
 % Translation completed on 2006/01/11
 \ProvidesFile{ecvhu.def}[europecv Hungarian definitions]
 % Personal information
+\addto\captionshungarian{
 \def\ecv@infosectionkey{\ecv@utf{Szem\'elyi adatok}}
 \def\ecv@namekey{\ecv@utf{Vezet\'ekn\'ev/Ut\'on\'ev}}
 \def\ecv@addresskey{\ecv@utf{C\'\i m}}
@@ -32,8 +33,8 @@
 \def\ecv@cefindepkey{\ecv@utf{\"on\'all\'o nyelvhaszn\'al\'o}}
 \def\ecv@cefprofkey{\ecv@utf{mesterfok\'u nyelvhaszn\'al\'o}}
 
-\renewcommand*\ecvtitle{\ecv@utf{\Large\textbf{E\ecv@kern u\ecv@kern
+\def\ecvtitle{\ecv@utf{\Large\textbf{E\ecv@kern u\ecv@kern
 r\ecv@kern o\ecv@kern p\ecv@kern a\ecv@kern s\ecv@kern s}\\[5pt]
 \Large\textbf{\"O\ecv@kern n\ecv@kern \'e\ecv@kern l\ecv@kern
 e\ecv@kern t\ecv@kern r\ecv@kern a\ecv@kern j\ecv@kern z}}}
-
+}

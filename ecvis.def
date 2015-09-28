@@ -3,6 +3,7 @@
 % Translation completed on 2006/01/13
 \ProvidesFile{ecvis.def}[europecv Icelandic definitions]
 % Personal information
+\addto\captionsicelandic{
 \def\ecv@infosectionkey{\ecv@utf{Pers{\'o}nulegar uppl{\'y}singar}}
 \def\ecv@namekey{\ecv@utf{Nafn}}
 \def\ecv@addresskey{\ecv@utf{Heimilisfang/(-f{\"o}ng)}}
@@ -32,7 +33,8 @@
 \def\ecv@cefindepkey{\ecv@utf{Lengra komin(n)}}
 \def\ecv@cefprofkey{\ecv@utf{Leikinn m{\'a}lnotandi}}
 
-\renewcommand*\ecvtitle{\ecv@utf{\Large\textbf{E\ecv@kern u\ecv@kern
+\def\ecvtitle{\ecv@utf{\Large\textbf{E\ecv@kern u\ecv@kern
 r\ecv@kern o\ecv@kern p\ecv@kern a\ecv@kern s\ecv@kern s}\\[5pt]
 \Large\textbf{\ae\ecv@kern v\ecv@kern i\ecv@kern \'a\ecv@kern
 g\ecv@kern r\ecv@kern i\ecv@kern p}}}
+}

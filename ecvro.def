@@ -3,6 +3,7 @@
 % Translation not yet finished
 \ProvidesFile{ecvro.def}[europecv Romanian definitions]
 % Personal information
+\addto\captionsromanian{
 \def\ecv@infosectionkey{\ecv@utf{Informa{\c t}ii personale}}
 \def\ecv@namekey{\ecv@utf{Nume~/ Prenume}}
 \def\ecv@addresskey{\ecv@utf{Adresa}}
@@ -32,5 +33,7 @@
 \def\ecv@cefindepkey{\ecv@utf{Independent user}} % To be translated
 \def\ecv@cefprofkey{\ecv@utf{Proficient user}} % To be translated
 
-\renewcommand*\ecvtitle{\ecv@utf{\Large\textbf{C\ecv@kern u\ecv@kern r\ecv@kern r\ecv@kern i\ecv@kern c\ecv@kern u\ecv@kern l\ecv@kern u\ecv@kern m \ecv@kern v\ecv@kern i\ecv@kern t\ecv@kern a\ecv@kern e}\\[5pt]
+\def\ecvtitle{\ecv@utf{\Large\textbf{C\ecv@kern u\ecv@kern r\ecv@kern r\ecv@kern i\ecv@kern c\ecv@kern u\ecv@kern l\ecv@kern u\ecv@kern m \ecv@kern v\ecv@kern i\ecv@kern t\ecv@kern a\ecv@kern e}\\[5pt]
 \Large\textbf{E\ecv@kern u\ecv@kern r\ecv@kern o\ecv@kern p\ecv@kern a\ecv@kern s\ecv@kern s}}}
+
+}
