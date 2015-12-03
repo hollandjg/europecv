@@ -3,6 +3,7 @@
 % Translation completed on 2006/01/13
 \ProvidesFile{ecvlv.def}[europecv Latvian definitions]
 % Personal information
+\addto\captionslatvian{
 \def\ecv@infosectionkey{\ecv@utf{Personas dati}}
 \def\ecv@namekey{\ecv@utf{Uzv{\=a}rds / V{\=a}rds}}
 \def\ecv@addresskey{\ecv@utf{Adrese}}
@@ -31,3 +32,12 @@
 \def\ecv@cefbasickey{\ecv@utf{Pamatl{\=\i}menis}}
 \def\ecv@cefindepkey{\ecv@utf{Vid{\=e}jais l{\=\i}menis}}
 \def\ecv@cefprofkey{\ecv@utf{Augst{\=a}kais l{\=\i}menis}}
+
+% To be translated
+\def\ecvtitle{\ecv@utf{\Large\textbf{E\ecv@kern u\ecv@kern
+r\ecv@kern o\ecv@kern p\ecv@kern a\ecv@kern s\ecv@kern s}\\[5pt]
+\Large\textbf{C\ecv@kern u\ecv@kern r\ecv@kern r\ecv@kern
+i\ecv@kern c\ecv@kern u\ecv@kern l\ecv@kern u\ecv@kern m \ecv@kern V\ecv@kern
+i\ecv@kern t\ecv@kern a\ecv@kern e}}}
+
+}

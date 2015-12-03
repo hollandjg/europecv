@@ -19,8 +19,18 @@
 
 \newcommand\ecv@utf[1]{{\inputencoding{utf8x}#1}}
 
+\usepackage{babel} % inherits global package options and provides \addto hook.
+
 % Set language
 \DeclareOption{english}{%
+  \AtEndOfPackage{%
+    \InputIfFileExists{ecven.def}{}{%
+    \ClassError{europecv}{English definition file 'ecven.def' not found}%
+     {The file should be inside the europecv folder.\MessageBreak
+    Try to re-install the europecv class.}}%
+  }%
+}
+\DeclareOption{british}{%
   \AtEndOfPackage{%
     \InputIfFileExists{ecven.def}{}{%
     \ClassError{europecv}{English definition file 'ecven.def' not found}%
@@ -53,6 +63,13 @@
   }%
 }
 \DeclareOption{german}{%
+  \AtEndOfPackage{%
+    \InputIfFileExists{ecvde.def}{}{%
+    \ClassWarningNoLine{europecv}{German definition file 'ecvde.def' not found}}%
+  }%
+}
+% Alias german to ngerman -> makes babel easier to use.
+\DeclareOption{ngerman}{%
   \AtEndOfPackage{%
     \InputIfFileExists{ecvde.def}{}{%
     \ClassWarningNoLine{europecv}{German definition file 'ecvde.def' not found}}%
@@ -229,11 +246,11 @@
 \DeclareOption{macukr}{\AtEndOfClass{\inputencoding{macukr}}}
 
 % Set font
-\DeclareOption{helvetica}{%                       
+\DeclareOption{helvetica}{%
   \renewcommand{\rmdefault}{phv}
   \renewcommand{\sfdefault}{phv}
 }
-\DeclareOption{arial}{%                       
+\DeclareOption{arial}{%
   \renewcommand{\rmdefault}{ma1} % (this font is NOT installed by default!)
   \renewcommand{\sfdefault}{ma1}
 }
@@ -241,11 +258,10 @@
   \renewcommand{\seriesdefault}{mc} % Narrow
   \renewcommand{\bfdefault}{bc}  % Boldface narrow
 }
-% No title
-% This must come *after* language definitions
-\DeclareOption{notitle}{%
-  \AtEndOfPackage{\renewcommand*\ecvtitle{}}%
-}
+
+% No title - doesn't matter where this comes.
+\providecommand*\writetitle{\ecvtitle}
+\DeclareOption{notitle}{\renewcommand*\writetitle{}}
 
 % Europass logo
 \DeclareOption{logo}{%
@@ -254,7 +270,7 @@
 }
 \DeclareOption{nologo}{\renewcommand*\draweuropasslogo{}}
 
-% Flag pictures of the EC can be found at 
+% Flag pictures of the EC can be found at
 %   http://europa.eu.int/abc/symbols/emblem/index_en.htm
 \DeclareOption{noflag}{\providecommand*\draweuropeflag{}}
 \DeclareOption{flagWB}{%
@@ -289,7 +305,7 @@
 % Pass all other options (a4paper, 10pt, draft, openbib, etc...) to article
 \DeclareOption*{%
   \PassOptionsToClass{\CurrentOption}{article}%
-} 
+}
 
 \ExecuteOptions{english,noflag,logo,hrule} % Default options
 
@@ -299,7 +315,7 @@
 
 %% start of addition (with permission) by David Carlisle
 \ifx\Umathchar\@undefined
-%% encoding support for pdftex and classic TeX 
+%% encoding support for pdftex and classic TeX
 \RequirePackage{ucs}
 \RequirePackage[utf8x]{inputenc}
 \else
@@ -328,7 +344,7 @@
 \newcommand\ecvfootnote[1]{\def\ecv@rfoot{#1}}
 \ecvfootnote{}
 
-\AtBeginDocument{%
+\AtEndOfPackage{%
 % Ensure that \ecv@leftcolwidth and \ecv@rightcolwidth
 % are correctly defined
 \ecvLeftColumnWidth{\ecv@leftcolwidth}
@@ -557,7 +573,7 @@
 
 % Text bullet
 \newcommand{\ecvbullet}{\raisebox{.35ex}[0cm][0cm]{\tiny\textbullet}}
-                                          
+
 \newenvironment{europecv}{%
   \ecvLeftColumnWidth{\ecv@leftcolwidth}
   \setlength\arrayrulewidth{\ecv@rulewidth}
@@ -575,11 +591,11 @@
     % Any better way of achieving the same result?!?
     \vskip-\ecv@logooffset\draweuropasslogo\hfill\phantom{.}& \tabularnewline
   \fi
-  \ifx\@empty\ecvtitle\else
+  \ifx\@empty\writetitle\else
      \ifx\@empty\draweuropasslogo
        & \tabularnewline[-.5em]
      \fi
-     \ecvtitle &\tabularnewline
+     \writetitle &\tabularnewline
   \fi
   \ifx\@empty\draweuropeflag\else
      & \tabularnewline
@@ -591,7 +607,7 @@
 \newcommand{\ecvsection}[2][10pt]{%
   {\large{\par\textbf{#2}}}\vspace{#1} & \tabularnewline\nopagebreak
 }
-          
+
 \newif\if@ecvitemstar
 \newcommand\ecvitem{\@ifstar{\@ecvitemstartrue \@ecvitem}%
   {\@ecvitemstarfalse\@ecvitem}}

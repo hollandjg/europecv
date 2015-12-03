@@ -2,7 +2,9 @@
 %
 % Translation completed
 \ProvidesFile{ecven.def}[europecv English definitions]
+
 % Personal information
+\providecommand\defineenglishnames{
 \def\ecv@infosectionkey{\ecv@utf{Personal information}}
 \def\ecv@namekey{\ecv@utf{Surname(s) / First name(s)}}
 \def\ecv@addresskey{\ecv@utf{Address(es)}}
@@ -31,9 +33,13 @@
 \def\ecv@cefbasickey{\ecv@utf{Basic user}}
 \def\ecv@cefindepkey{\ecv@utf{Independent user}}
 \def\ecv@cefprofkey{\ecv@utf{Proficient user}}
-
-\providecommand*{\ecvtitle}{\ecv@utf{\Large\textbf{E\ecv@kern u\ecv@kern
+\def\ecvtitle{\ecv@utf{\Large\textbf{E\ecv@kern u\ecv@kern
 r\ecv@kern o\ecv@kern p\ecv@kern a\ecv@kern s\ecv@kern s}\\[5pt]
 \Large\textbf{C\ecv@kern u\ecv@kern r\ecv@kern r\ecv@kern
 i\ecv@kern c\ecv@kern u\ecv@kern l\ecv@kern u\ecv@kern m \ecv@kern V\ecv@kern
 i\ecv@kern t\ecv@kern a\ecv@kern e}}}
+}
+
+\addto\captionsenglish{\defineenglishnames}
+\addto\captionsbritish{\defineenglishnames}
+\addto\captionsUKenglish{\defineenglishnames}

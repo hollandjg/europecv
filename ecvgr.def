@@ -6,6 +6,7 @@
 % Translation completed on 2006/01/14
 \ProvidesFile{ecvgr.def}[europecv Greek definitions]
 % Personal information
+\addto\captionsgreek{
 \def\ecv@infosectionkey{\ecv@utf{\foreignlanguage{greek}{Προσωπικές πληροφορίες}}}
 \def\ecv@namekey{\ecv@utf{\foreignlanguage{greek}{Επώνυμο (-α)~/ Όνομα (-τα)}}}
 \def\ecv@addresskey{\ecv@utf{\foreignlanguage{greek}{Διεύθυνση~(-εις)}}}
@@ -35,5 +36,6 @@
 \def\ecv@cefindepkey{\ecv@utf{\foreignlanguage{greek}{Ανεξάρτητος χρήστης}}}
 \def\ecv@cefprofkey{\ecv@utf{\foreignlanguage{greek}{Αυτάρκης χρήστης}}}
 
-\renewcommand*\ecvtitle{\ecv@utf{\Large\textbf{\foreignlanguage{greek}{Β\ecv@kern ι\ecv@kern ο\ecv@kern γ\ecv@kern ρ\ecv@kern α\ecv@kern φ\ecv@kern ι\ecv@kern κ\ecv@kern ό}}\\[5pt]
+\def\ecvtitle{\ecv@utf{\Large\textbf{\foreignlanguage{greek}{Β\ecv@kern ι\ecv@kern ο\ecv@kern γ\ecv@kern ρ\ecv@kern α\ecv@kern φ\ecv@kern ι\ecv@kern κ\ecv@kern ό}}\\[5pt]
 \Large\textbf{\foreignlanguage{greek}{σ\ecv@kern η\ecv@kern μ\ecv@kern ε\ecv@kern ί\ecv@kern ω\ecv@kern μ\ecv@kern α} \foreignlanguage{english}{Europass}}}}
+}

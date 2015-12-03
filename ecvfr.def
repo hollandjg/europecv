@@ -3,6 +3,7 @@
 % Translation completed on 2005/05/05
 \ProvidesFile{ecvfr.def}[europecv French definitions]
 % Informations personnelles
+\providecommand\definefrenchnames{
 \def\ecv@infosectionkey{\ecv@utf{Informations personnelles}}
 \def\ecv@namekey{\ecv@utf{Nom(s) / Pr\'enom(s)}}
 \def\ecv@addresskey{\ecv@utf{Adresse(s)}}
@@ -32,6 +33,10 @@
 \def\ecv@cefindepkey{\ecv@utf{Utilisateur Ind\'ependant}}
 \def\ecv@cefprofkey{\ecv@utf{Utilisateur exp\'eriment\'e}}
 
-\renewcommand*\ecvtitle{\ecv@utf{\Large\textbf{C\ecv@kern u\ecv@kern r\ecv@kern r\ecv@kern i\ecv@kern c\ecv@kern u\ecv@kern l\ecv@kern u\ecv@kern m \ecv@kern v\ecv@kern i\ecv@kern t\ecv@kern a\ecv@kern e}\\[5pt]
+\def\ecvtitle{\ecv@utf{\Large\textbf{C\ecv@kern u\ecv@kern r\ecv@kern r\ecv@kern i\ecv@kern c\ecv@kern u\ecv@kern l\ecv@kern u\ecv@kern m \ecv@kern v\ecv@kern i\ecv@kern t\ecv@kern a\ecv@kern e}\\[5pt]
 \Large\textbf{E\ecv@kern u\ecv@kern
 r\ecv@kern o\ecv@kern p\ecv@kern a\ecv@kern s\ecv@kern s}}}
+}
+
+\addto\captionsfrench{\definefrenchnames}
+\addto\captionsfrancais{\definefrenchnames}

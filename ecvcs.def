@@ -3,6 +3,7 @@
 % Translation completed on 2006/01/13
 \ProvidesFile{ecvcs.def}[europecv Czech definitions]
 % Personal information
+\addto\captionsczech{
 \def\ecv@infosectionkey{\ecv@utf{Osobn{\'\i} {\'u}daje}}
 \def\ecv@namekey{\ecv@utf{Jm{\'e}no / P{\v r}{\'\i}jmen{\'\i}}}
 \def\ecv@addresskey{\ecv@utf{Adresa}}
@@ -32,8 +33,8 @@
 \def\ecv@cefindepkey{\ecv@utf{Samostatn{\'y} u{\v z}ivatel}}
 \def\ecv@cefprofkey{\ecv@utf{Zku{\v s}en{\'y} u{\v z}ivatel}}
 
-\renewcommand*\ecvtitle{\ecv@utf{\Large\textbf{E\ecv@kern u\ecv@kern
+\def\ecvtitle{\ecv@utf{\Large\textbf{E\ecv@kern u\ecv@kern
 r\ecv@kern o\ecv@kern p\ecv@kern a\ecv@kern s\ecv@kern s}\\[5pt]
 \Large\textbf{{\v z}\ecv@kern i\ecv@kern v\ecv@kern o\ecv@kern
 t\ecv@kern o\ecv@kern p\ecv@kern i\ecv@kern s}}}
-
+}
